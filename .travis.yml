@@ -1,0 +1,16 @@
+language: python
+
+python:
+  - 3.5
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - enchant
+
+script:
+  - python --version
+  - sqlite3 --version
+  - python -c 'import sqlite3; print(sqlite3.sqlite_version)'
