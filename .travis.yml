@@ -12,5 +12,6 @@ addons:
     - sqlite3
 
 script:
+  - sudo apt-get install --reinstall sqlite3 libsqlite3-0 libsqlite3-dev
   - sqlite3 --version
   - python -c 'import sqlite3; print(sqlite3.sqlite_version)'
