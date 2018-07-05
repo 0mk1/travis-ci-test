@@ -13,4 +13,5 @@ script:
   - sqlite3 --version
   - python -c 'import sqlite3; print(sqlite3.sqlite_version)'
   - sudo apt-get autoremove sqlite3
+  - sqlite3 --version
   - python -c 'import sqlite3; print(sqlite3.sqlite_version)'
