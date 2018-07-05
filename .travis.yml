@@ -6,12 +6,13 @@ python:
 addons:
   apt:
     sources:
-      - travis-ci/sqlite3
+      - ubuntu/sqlite3
     packages:
     - enchant
     - sqlite3
 
 script:
+  - sqlite3 --version
   - sudo apt-get install --reinstall sqlite3 libsqlite3-0 libsqlite3-dev
   - sqlite3 --version
   - python -c 'import sqlite3; print(sqlite3.sqlite_version)'
