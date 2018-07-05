@@ -5,13 +5,12 @@ python:
 
 addons:
   apt:
+    sources:
+      - travis-ci/sqlite3
     packages:
     - enchant
+    - sqlite3
 
 script:
-  - python --version
-  - sqlite3 --version
-  - python -c 'import sqlite3; print(sqlite3.sqlite_version)'
-  - sudo apt-get autoremove sqlite3
   - sqlite3 --version
   - python -c 'import sqlite3; print(sqlite3.sqlite_version)'
