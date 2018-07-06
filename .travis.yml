@@ -9,7 +9,6 @@ addons:
     - enchant
 
 install:
-  - sudo apt-get autoremove sqlite3
   - wget http://mirrors.kernel.org/ubuntu/pool/main/s/sqlite3/libsqlite3-0_3.11.0-1ubuntu1_amd64.deb
   - sudo dpkg -i libsqlite3-0_3.11.0-1ubuntu1_amd64.deb
   - wget http://mirrors.kernel.org/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0-1ubuntu1_amd64.deb
