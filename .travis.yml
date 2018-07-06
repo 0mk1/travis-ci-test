@@ -5,14 +5,16 @@ python:
 
 addons:
   apt:
-    sources:
-      - ubuntu/sqlite3
     packages:
     - enchant
-    - sqlite3
+
+install:
+  - apt-get autoremove sqlite3
+  - wget http://mirrors.kernel.org/ubuntu/pool/main/s/sqlite3/libsqlite3-0_3.11.0-1ubuntu1_amd64.deb
+  - dpkg -i libsqlite3-0_3.11.0-1ubuntu1_amd64.deb
+  - wget http://mirrors.kernel.org/ubuntu/pool/main/s/sqlite3/sqlite3_3.11.0-1ubuntu1_amd64.deb
+  - dpkg -i sqlite3_3.11.0-1ubuntu1_amd64.deb
 
 script:
-  - sqlite3 --version
-  - sudo apt-get install --reinstall sqlite3 libsqlite3-0 libsqlite3-dev
   - sqlite3 --version
   - python -c 'import sqlite3; print(sqlite3.sqlite_version)'
